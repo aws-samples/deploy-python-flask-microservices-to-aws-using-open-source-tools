@@ -189,12 +189,12 @@ resource "aws_subnet" "private_2" {
 # A NAT gateway is required for the private subnet.
 # Configure EIP for the first NAT Gateway.
 resource "aws_eip" "nat_1" {
-  vpc = true
+  domain = "vpc"
 }
 
 # configure EIP for the second NAT gateway.
 resource "aws_eip" "nat_2" {
-  vpc = true
+  domain = "vpc"
 }
 
 # Create the first NAT gateway.
